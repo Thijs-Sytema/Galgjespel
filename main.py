@@ -1,11 +1,14 @@
+
+import random
+
 word_list = ["informatica","informatiekunde","spelletje","aardigheidje","scholier","fotografie","waardebepaling","specialtieit","verzekering","universiteit","heesterperk"]
 
-def get word(word_list):
+def get_word(word_list):
   word = random.choice(word_list)
   return word.upper()
 
 def play(word):
-  word_completion = "_" len(word)
+  word_completion = "_" * len(word)
   guessed = False
   guessed_letters = [] 
   guessed_words = []
@@ -33,7 +36,7 @@ def play(word):
       word_completion = "".join(word_as_list)
       if "_" not in word_completion:
         guessed = True
-  elif len(guess) == len(word) and  guess.isalpha():
+  elif len(guess) == len(word) and guess.isalpha():
     if guess in guessed_words:
       print("Je hebt deze letter al geprobeerd: ", guess, "!")
     elif guess != word:

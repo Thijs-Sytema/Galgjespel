@@ -19,5 +19,8 @@ def play(word):
     if len(guess) == 1 and guess.isalpha():
       if guess in guessed_letters:
         print("Je hebt deze letter al geprobeerd: ", guess, "!")
-    
+    elif guess not in word:
+      print(guess, "is niet in het woord :(")
+      tries -= 1
+      guessed_letters.append(guess)
 

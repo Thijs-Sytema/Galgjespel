@@ -23,4 +23,10 @@ def play(word):
       print(guess, "is niet in het woord :(")
       tries -= 1
       guessed_letters.append(guess)
+    else:
+      print("Goed zo,", guess, "zit in het woord!")
+      guessed_letters.append(guess)
+      word_as_list = list(word_completion)
+      
+
 

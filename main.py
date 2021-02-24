@@ -43,10 +43,17 @@ def play(word):
   else:
     guessed = True
     word_completion = word
+else:
+  print("ongeldige input")
+print(display_hangman(tries))
+print(word_completion)
+print("\n")
 
-
-
-    
+if guessed:
+  print("Goed zo, je hebt het woord geraden!")
+else:
+  print("Helaas, je levens zijn op. Het woord was " + word +" . Volgende keer beter!"
+  
       
 
 

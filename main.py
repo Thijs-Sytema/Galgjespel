@@ -10,4 +10,11 @@ def play(word):
   guessed_letters = [] 
   guessed_words = []
   tries = 6
+  print("Het spel gaat beginnen!")
+  print(display_hangman(tries))
+  print(word_completion)
+  print("\n")
+  while not guessed and tries > 0:
+    guess = input("Raad een letter of woord: ").upper()
+    if len(guess) == 1 and guess.isalpha():
 

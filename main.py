@@ -53,8 +53,45 @@ if guessed:
   print("Goed zo, je hebt het woord geraden!")
 else:
   print("Helaas, je levens zijn op. Het woord was " + word +" . Volgende keer beter!"
-  
-      
 
+def display_hangman(tries):
+  stages = ['''
+     +---+
+         |
+         |
+         |
+       ===''', '''
+    +---+
+    O   |
+        |
+        |
+       ===''', '''
+    +---+
+    O   |
+    |   |
+        |
+       ===''', '''
+    +---+
+    O   |
+   /|   |
+        |
+     ===''', '''
+   +---+
+   O   |
+  /|\  |
+       |
+     ===''', '''
+   +---+
+   O   |
+  /|\  |
+  /    |
+      ===''', '''
+   +---+
+   O   |
+  /|\  |
+  / \  |
+       ===''']
+      
+return stages[tries]
 
 

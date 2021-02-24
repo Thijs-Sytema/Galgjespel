@@ -17,4 +17,7 @@ def play(word):
   while not guessed and tries > 0:
     guess = input("Raad een letter of woord: ").upper()
     if len(guess) == 1 and guess.isalpha():
+      if guess in guessed_letters:
+        print("Je hebt deze letter al geprobeerd: ", guess, "!")
+    
 
